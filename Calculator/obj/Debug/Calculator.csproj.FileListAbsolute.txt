@@ -1,0 +1,14 @@
+D:\PRogramming\C#\WPF\Calculator\Calculator\bin\Debug\Calculator.exe.config
+D:\PRogramming\C#\WPF\Calculator\Calculator\bin\Debug\Calculator.exe
+D:\PRogramming\C#\WPF\Calculator\Calculator\bin\Debug\Calculator.pdb
+D:\PRogramming\C#\WPF\Calculator\Calculator\obj\Debug\Calculator.csprojResolveAssemblyReference.cache
+D:\PRogramming\C#\WPF\Calculator\Calculator\obj\Debug\MainWindow.g.cs
+D:\PRogramming\C#\WPF\Calculator\Calculator\obj\Debug\App.g.cs
+D:\PRogramming\C#\WPF\Calculator\Calculator\obj\Debug\Calculator_MarkupCompile.cache
+D:\PRogramming\C#\WPF\Calculator\Calculator\obj\Debug\Calculator_MarkupCompile.lref
+D:\PRogramming\C#\WPF\Calculator\Calculator\obj\Debug\MainWindow.baml
+D:\PRogramming\C#\WPF\Calculator\Calculator\obj\Debug\Calculator.g.resources
+D:\PRogramming\C#\WPF\Calculator\Calculator\obj\Debug\Calculator.Properties.Resources.resources
+D:\PRogramming\C#\WPF\Calculator\Calculator\obj\Debug\Calculator.csproj.GenerateResource.Cache
+D:\PRogramming\C#\WPF\Calculator\Calculator\obj\Debug\Calculator.exe
+D:\PRogramming\C#\WPF\Calculator\Calculator\obj\Debug\Calculator.pdb
