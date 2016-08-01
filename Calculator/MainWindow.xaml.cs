@@ -30,7 +30,7 @@ namespace Calculator
             string s = TextBox1.Text;
 
             StringEvaluater strEval = new StringEvaluater(s);           
-
+            //;p;p
             label1.Content = strEval.Eval();
         }
     

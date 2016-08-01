@@ -12,3 +12,6 @@ D:\PRogramming\C#\WPF\Calculator\Calculator\obj\Debug\Calculator.Properties.Reso
 D:\PRogramming\C#\WPF\Calculator\Calculator\obj\Debug\Calculator.csproj.GenerateResource.Cache
 D:\PRogramming\C#\WPF\Calculator\Calculator\obj\Debug\Calculator.exe
 D:\PRogramming\C#\WPF\Calculator\Calculator\obj\Debug\Calculator.pdb
+D:\PRogramming\Git\calculator_WPF\Calculator\bin\Debug\Calculator.exe.config
+D:\PRogramming\Git\calculator_WPF\Calculator\obj\Debug\Calculator.exe
+D:\PRogramming\Git\calculator_WPF\Calculator\obj\Debug\Calculator.pdb
