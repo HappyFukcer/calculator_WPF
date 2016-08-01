@@ -31,16 +31,16 @@ namespace Calculator
 
             StringEvaluater strEval = new StringEvaluater(s);           
 
-            label1.Content = strEval.Eval();
+            label1.Content = TextBox1.Text +" = "+ strEval.Eval();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            string s = TextBox1.Text;
+            
 
-            StringEvaluater strEval = new StringEvaluater(s);
+            string s = (string)((Button)e.OriginalSource).Content;
 
-            label1.Content = strEval.Eval();
+            
         }
 
     }
