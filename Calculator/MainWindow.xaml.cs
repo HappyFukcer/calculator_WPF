@@ -25,7 +25,7 @@ namespace Calculator
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Button_Equal_Click(object sender, RoutedEventArgs e)
         {
             string s = TextBox1.Text;
 
@@ -33,6 +33,15 @@ namespace Calculator
 
             label1.Content = strEval.Eval();
         }
-    
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            string s = TextBox1.Text;
+
+            StringEvaluater strEval = new StringEvaluater(s);
+
+            label1.Content = strEval.Eval();
+        }
+
     }
 }

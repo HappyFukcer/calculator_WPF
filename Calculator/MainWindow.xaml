@@ -6,9 +6,49 @@
         xmlns:local="clr-namespace:Calculator"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="545">
-    <Grid>
-        <TextBox Name="TextBox1" Margin="35,26,382,263"/>
-        <Button Name="Button1" Content="Calc"  Margin="35,82,432,207" Click="Button_Click"></Button>
-        <Label Name="label1" Content="Label" Margin="200,26,225,263"/>
+    <Grid ShowGridLines="True">
+        <Grid.RowDefinitions>
+            <RowDefinition  Height="*"></RowDefinition>
+            <RowDefinition  Height="*"></RowDefinition>
+            <RowDefinition  Height="3*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="2" ShowGridLines="True">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            
+            <Button Grid.Row="4" Grid.Column="3" Name="Buttun_Equal" Content="="   Click="Button_Equal_Click"></Button>
+            
+            <Button Grid.Row="3" Grid.Column="0" Name="Button_1" Content="1"   Click="Button_Click"></Button>
+            <Button Grid.Row="3" Grid.Column="1" Name="Button_2" Content="2"   Click="Button_Click"></Button>
+            <Button Grid.Row="3" Grid.Column="2" Name="Button_3" Content="3"   Click="Button_Click"></Button>
+            <Button Grid.Row="2" Grid.Column="0" Name="Button_4" Content="4"   Click="Button_Click"></Button>
+            <Button Grid.Row="2" Grid.Column="1" Name="Button_5" Content="5"   Click="Button_Click"></Button>
+            <Button Grid.Row="2" Grid.Column="2" Name="Button_6" Content="6"   Click="Button_Click"></Button>
+            <Button Grid.Row="1" Grid.Column="0" Name="Button_7" Content="7"   Click="Button_Click"></Button>
+            <Button Grid.Row="1" Grid.Column="1" Name="Button_8" Content="8"   Click="Button_Click"></Button>
+            <Button Grid.Row="1" Grid.Column="2" Name="Button_9" Content="9"   Click="Button_Click"></Button>
+
+            <Button Grid.Row="0" Grid.Column="3" Name="Button_div" Content="/"   Click="Button_Click"></Button>
+            <Button Grid.Row="1" Grid.Column="3" Name="Button_mult" Content="*"   Click="Button_Click"></Button>
+            <Button Grid.Row="2" Grid.Column="3" Name="Button_sub" Content="-"   Click="Button_Click"></Button>
+            <Button Grid.Row="3" Grid.Column="3" Name="Button_sum" Content="+"   Click="Button_Click"></Button>
+            
+            <Button Grid.Row="4" Grid.Column="0" Name="Button_sign" Content="&#x00B1;"  Click="Button_Click"></Button>
+            <Button Grid.Row="4" Grid.Column="1" Name="Button_0" Content="0"  Click="Button_Click"></Button>
+            <Button Grid.Row="4" Grid.Column="2" Name="Button_point" Content=","  Click="Button_Click"></Button>
+        </Grid>      
+        <TextBox Grid.Row="1" Text ="lol" Name="TextBox1" />
+        <Label Name="label1" Content="Label" />
     </Grid>
 </Window>
