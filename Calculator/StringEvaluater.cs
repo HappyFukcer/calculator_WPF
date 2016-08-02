@@ -10,6 +10,11 @@ namespace Calculator
     {
         private string Equation;
 
+        public StringEvaluater()
+        {
+
+        }
+
         public  StringEvaluater(string Equation)
         {
             this.Equation = Equation.Replace(" ",string.Empty);
@@ -76,7 +81,24 @@ namespace Calculator
                 default:
                     return "";
             }          
-        }      
+        }
+
+        public string Operation(string num1, string operation, string num2)
+        {
+            switch (operation)
+            {
+                case "-":
+                    return (Convert.ToDouble(num1) - Convert.ToDouble(num2)).ToString();
+                case "+":
+                    return (Convert.ToDouble(num1) + Convert.ToDouble(num2)).ToString();
+                    case "/":
+                    return (Convert.ToDouble(num1) / Convert.ToDouble(num2)).ToString();
+                case "*":
+                    return (Convert.ToDouble(num1) * Convert.ToDouble(num2)).ToString();
+                default:
+                    return "";
+            }
+        }
 
         private void Resize(ref string[]mas , int index)
         {

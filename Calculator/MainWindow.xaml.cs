@@ -20,6 +20,10 @@ namespace Calculator
     /// </summary>
     public partial class MainWindow : Window
     {
+        bool flag = false;
+        StringEvaluater strEval = new StringEvaluater();
+        string num1;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -27,20 +31,30 @@ namespace Calculator
 
         private void Button_Equal_Click(object sender, RoutedEventArgs e)
         {
-            string s = TextBox1.Text;
+            string s;
+            if (flag)
+            {
+                s = TextBox1.Text;
+                strEval = new StringEvaluater(s);
+                label1.Content = TextBox1.Text + " = " + strEval.Eval();
 
-            StringEvaluater strEval = new StringEvaluater(s);           
-
-            label1.Content = TextBox1.Text +" = "+ strEval.Eval();
+                flag = false;
+            }
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            
+            string operation = (string)((Button)e.OriginalSource).Content;
 
-            string s = (string)((Button)e.OriginalSource).Content;
+            if (flag)
+            {
+                TextBox1.Text = strEval.Operation(num1, operation, TextBox1.Text);
+                //flag = true;
+            }
 
-            
+            num1 = TextBox1.Text;
+            flag = true;
+            TextBox1.Text="";
         }
 
     }
