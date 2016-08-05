@@ -15,6 +15,11 @@ namespace Calculator
 
         }
 
+        public StringEvaluater(string num1, string operation, string num2)
+        {
+
+        }
+
         public  StringEvaluater(string Equation)
         {
             this.Equation = Equation.Replace(" ",string.Empty);
