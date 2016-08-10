@@ -22,7 +22,7 @@ namespace Calculator
     {       
         StringEvaluater strEval = new StringEvaluater();
 
-        string num1;
+        string num;
         bool number_click = false;
         bool operation_click = false;
         string operation;
@@ -47,9 +47,9 @@ namespace Calculator
             }
             else
             {
-                num1 = strEval.Operation(num1, operation, TextBox1.Text);
-                label1.Content += " " + TextBox1.Text + " = " + num1;
-                TextBox1.Text = num1;
+                num = strEval.Operation(num, operation, TextBox1.Text);
+                label1.Content += " " + TextBox1.Text + " = " + num;
+                TextBox1.Text = num;
                 number_click = false;
                 operation_click = false;
             }       
@@ -75,27 +75,35 @@ namespace Calculator
 
         private void Button_Click_Operation(object sender, RoutedEventArgs e)
         {
-            if ((bool)checkBox1.IsChecked)
+            operation = (string)((Button)e.OriginalSource).Content;
+            if (operation_click)
             {
-                TextBox1.Text += (string)((Button)e.OriginalSource).Content;
+                label1.Content = ((string)label1.Content).Substring(0, ((string)label1.Content).Length - 1);
+                label1.Content += operation;
             }
             else
             {
-                operation = (string)((Button)e.OriginalSource).Content;
-                if (number_click)
-                {
-                    label1.Content += " " + TextBox1.Text + " " + operation;
-                    TextBox1.Text = num1 = strEval.Operation(num1, operation, TextBox1.Text);
-                }
+                if ((bool)checkBox1.IsChecked)                
+                    TextBox1.Text += (string)((Button)e.OriginalSource).Content;                
                 else
                 {
-                    num1 = TextBox1.Text;
-                    label1.Content += TextBox1.Text + " " + operation;
-                    number_click = true;
+                    if (number_click)
+                    {
+                        label1.Content += " " + TextBox1.Text + " " + operation;
+                        TextBox1.Text = num = strEval.Operation(num, operation, TextBox1.Text);
+                    }
+                    else
+                    {
+                        num = TextBox1.Text;
+                        label1.Content += TextBox1.Text + " " + operation;
+                        number_click = true;
+                    }
                 }
-                operation_click = true;
             }
+                    operation_click = true;
         }
+
+        
 
         private void PreviewKeyDownHandler(object sender, KeyEventArgs e)
         {
@@ -109,5 +117,9 @@ namespace Calculator
             }
         }
 
+        private void Button_sign_Click(object sender, RoutedEventArgs e)
+        {
+            TextBox1.Text = (Convert.ToDouble(TextBox1.Text) * (-1)).ToString();
+        }
     }
 }
