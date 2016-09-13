@@ -47,7 +47,7 @@
             <Button Grid.Row="4" Grid.Column="0" Name="Button_sign" Content="&#x00B1;" Click="Button_sign_Click"></Button>
             <Button Grid.Row="4" Grid.Column="1" Name="Button_0" Content="0" Click="Button_Click_Number"></Button>
             <Button Grid.Row="4" Grid.Column="2" Name="Button_point" Content="," Click="Button_Click_Number"></Button>
-        </Grid>
+        </Grid>       
         <TextBox Grid.Row="1" Text ="" Name="TextBox1" PreviewKeyDown="PreviewKeyDownHandler" FontSize="16"/>
         <Label Grid.Row="0"  Name="label1" Content="" />
         <CheckBox x:Name="checkBox1" Content="CheckBox" HorizontalAlignment="Left" Margin="456,10,0,0" Grid.Row="1" VerticalAlignment="Top" ClickMode="Press" />
